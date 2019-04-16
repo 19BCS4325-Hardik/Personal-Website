@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is the personal website of Rick Bowman." />
+    <meta name="author" content="Rick Bowman" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="~/Images/favicon.ico" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" runat="server" href="~/Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" runat="server" href="~/Home/WorkHistory">Work History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" runat="server" href="~/Home/Education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" runat="server" href="~/Home/AboutMe">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" runat="server" href="~/PersonalProject/Index">Personal Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/rickbowman" target="_blank">Github</a>
+                </li>
+            </ul>
+            <form class="navbar-nav nav-item">
+                @if (Session["user"] == null)
+                {
+                    <a class="nav-link nav-item" runat="server" href="~/Login/Login">Login</a>
+                }
+                else
+                {
+                    <a class="nav-link nav-item" runat="server" href="~/Login/Logout">Logout</a>
+                }
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-9 container body-content rounded-corners">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

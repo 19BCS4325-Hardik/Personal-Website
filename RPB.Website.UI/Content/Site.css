@@ -1,0 +1,81 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+
+
+.main {
+    margin: 25px 0px 0px 0px;
+}
+
+.imageprop {
+    width: 100px;
+    height: 75px;
+}
+
+.sidebar {
+    margin: 25px;
+    border-width: 1px;
+    border-style: solid;
+    min-height: 500px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+    .sidebar a {
+        padding-left: 10px;
+        padding-right: 0px;
+        width: 20%;
+    }
+
+.header {
+    margin: 0px;
+    padding: 0px;
+    background-color: rebeccapurple;
+}
+
+    .header h1, .header h2, .header h3 {
+        margin: 0px;
+        padding: 0px 0px 0px 10px;
+        color: white;
+        font-family: Calibri;
+    }
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.rounded-corners {
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+}

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<RPB.Website.BL.PersonalProject>
+
+@{
+    ViewBag.Title = "Personal Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Personal Projects</h2>
+
+@if (Session["user"] != null)
+{
+    <p>
+        @Html.ActionLink("New", "Create")
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Languages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GitHubRepository)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Demonstration)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Languages)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <a href="@item.GitHubRepository" target="_blank">Repository</a>
+            </td>
+            <td>
+                <iframe width="420" height="315" src="@item.Demonstration" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </td>
+            @if (Session["user"] != null)
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            }
+        </tr>
+    }
+</table>

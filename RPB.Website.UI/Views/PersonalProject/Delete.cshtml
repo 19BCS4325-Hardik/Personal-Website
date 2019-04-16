@@ -1,0 +1,67 @@
+﻿@model RPB.Website.BL.PersonalProject
+
+@{
+    ViewBag.Title = "Delete Project";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Languages)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Languages)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GitHubRepository)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GitHubRepository)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Demonstration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demonstration)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <div>
+                <input type="submit" value="Delete" class="btn btn-default" />
+            </div>
+            <br />
+            <div>
+                @Html.ActionLink("Back to Projects", "Index", new { controller = "PersonalProject" })
+            </div>
+        </div>
+    }
+</div>
