@@ -9,7 +9,6 @@
     <link rel="icon" type="image/x-icon" href="~/Images/favicon.ico" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -19,19 +18,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/Home">Home</a>
+                    <a class="nav-link" href="~/Home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/Home/WorkHistory">Work History</a>
+                    <a class="nav-link" href="~/Home/WorkHistory">Work History</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/Home/Education">Education</a>
+                    <a class="nav-link" href="~/Home/Education">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/Home/AboutMe">About Me</a>
+                    <a class="nav-link" href="~/Home/AboutMe">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/PersonalProject/Index">Personal Projects</a>
+                    <a class="nav-link" href="~/PersonalProject/Index">Personal Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/rickbowman" target="_blank">Github</a>
@@ -40,11 +39,11 @@
             <form class="navbar-nav nav-item">
                 @if (Session["user"] == null)
                 {
-                    <a class="nav-link nav-item" runat="server" href="~/Login/Login">Login</a>
+                    <a class="nav-link nav-item" href="~/Login/Login">Login</a>
                 }
                 else
                 {
-                    <a class="nav-link nav-item" runat="server" href="~/Login/Logout">Logout</a>
+                    <a class="nav-link nav-item" href="~/Login/Logout">Logout</a>
                 }
             </form>
         </div>
@@ -56,9 +55,6 @@
             </div>
         </div>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
