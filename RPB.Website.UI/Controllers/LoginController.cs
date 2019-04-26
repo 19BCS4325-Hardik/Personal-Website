@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace RPB.Website.UI.Controllers
 {
+    [ResponseCompressFilter]
     public class LoginController : Controller
     {
 

@@ -2,6 +2,7 @@
 
 namespace RPB.Website.UI.Controllers
 {
+    [ResponseCompressFilter]
     public class HomeController : Controller
     {
         public ActionResult Index()
