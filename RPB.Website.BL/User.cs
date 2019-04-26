@@ -115,7 +115,7 @@ namespace RPB.Website.BL
                         }
                     }
                     else
-                        throw new Exception("Passowrd needs to be set.");
+                        throw new Exception("Password needs to be set.");
                 }
                 else
                     throw new Exception("UserId needs to be set.");
