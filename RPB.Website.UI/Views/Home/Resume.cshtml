@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Resume";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <ul class="list-unstyled">
+            <li class="d-inline">Download: </li>
+            <li class="d-inline">@Html.ActionLink(".pdf", "DownloadFile", new { fileExtension = "pdf" })</li>
+            <li class="d-inline">@Html.ActionLink(".docx", "DownloadFile", new { fileExtension = "docx" })</li>
+        </ul>
+        <object class="embed-responsive" height="1150" type="application/pdf" data="~/Files/Rick_Bowman_Resume.pdf">
+            <p>Insert your error message here, if the PDF cannot be displayed.</p>
+        </object>
+    </div>

@@ -212,6 +212,8 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="bundleconfig.json" />
+    <Content Include="Files\Rick_Bowman_Resume.pdf" />
+    <Content Include="Files\Rick_Bowman_Resume.docx" />
     <None Include="Properties\PublishProfiles\rickbowman - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -262,14 +264,12 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Home\WorkHistory.cshtml" />
-    <Content Include="Views\Home\AboutMe.cshtml" />
     <Content Include="Views\PersonalProject\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\PersonalProject\Create.cshtml" />
     <Content Include="Views\PersonalProject\Edit.cshtml" />
     <Content Include="Views\PersonalProject\Delete.cshtml" />
-    <Content Include="Views\Home\Education.cshtml" />
+    <Content Include="Views\Home\Resume.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
