@@ -212,8 +212,8 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="bundleconfig.json" />
-    <Content Include="Files\Rick_Bowman_Resume.pdf" />
     <Content Include="Files\Rick_Bowman_Resume.docx" />
+    <Content Include="Files\Rick_Bowman_Resume.pdf" />
     <None Include="Properties\PublishProfiles\rickbowman - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
